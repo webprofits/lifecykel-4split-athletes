@@ -1,46 +1,70 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex,nofollow">
-<title>Performance Sale · 4-split concepts</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>Lifecykel — Performance Sale · Creator + 4-split Pack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg-base:#FFFFFF;--bg-alt:#F7F6F5;--border:#E0DEDC;
-  --text-primary:#070909;--text-muted:#888888;
-  --lc-green:#2F5630;--lc-green-deep:#1f3b21;--lc-amber:#F4A623;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg-base);color:var(--text-primary);font-family:'Poppins',system-ui,sans-serif;font-size:15px;line-height:1.6}
-.wrap{max-width:1400px;margin:0 auto;padding:0 28px}
+  :root {
+    --lc-green: #2F5630;
+    --lc-green-deep: #1F3D20;
+    --lc-cream: #F5EFE3;
+    --lc-amber: #E8A22B;
+    --ink: #14110E;
+    --ink-soft: #4B463E;
+    --paper: #FFFFFF;
+    --paper-warm: #F7F6F5;
+    --rule: #E5E2DD;
+  }
+  *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper-warm); color: var(--ink); font-family: 'Poppins', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
 
-.hero{padding:56px 0 24px}
-.hero h1{font-size:clamp(28px,4.4vw,40px);font-weight:900;letter-spacing:-0.03em;line-height:1.08;margin-bottom:8px}
-.hero h1 em{font-style:normal;color:var(--lc-green)}
-.hero p{color:var(--text-muted);font-size:14px;max-width:840px}
+  .hero { padding: 56px 32px 28px; max-width: 1280px; margin: 0 auto; }
+  .hero h1 {
+    font-family: 'DM Serif Display', Georgia, serif; font-weight: 400;
+    font-size: clamp(34px, 5vw, 56px); line-height: 1.05; color: var(--ink);
+    margin-bottom: 16px; max-width: 900px;
+  }
+  .hero h1 em { font-style: italic; color: var(--lc-green); }
+  .hero .lede { font-size: 16px; line-height: 1.55; color: var(--ink-soft); max-width: 760px; }
+  .pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+  .pill { padding: 5px 12px; font-size: 12px; font-weight: 500;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-soft); }
+  .pill.lc { background: var(--lc-green); color: #fff; border-color: var(--lc-green); }
 
-section{padding:8px 0 56px}
+  .section { padding: 28px 32px 64px; max-width: 1280px; margin: 0 auto; }
+  .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
+  .section-head h2 { font-size: 22px; font-weight: 700; }
+  .section-head .sub { font-size: 13px; color: var(--ink-soft); }
 
-.style-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:8px}
-@media (max-width:900px){.style-grid{grid-template-columns:1fr}}
-.style-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.style-card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
-.style-card-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.style-card-code{font-family:'SFMono-Regular',Menlo,Monaco,monospace;font-size:11px;font-weight:700;background:var(--text-primary);color:#fff;padding:3px 8px;border-radius:4px}
-.style-card-style{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--lc-green);text-align:right}
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
 
-.preview{width:100%;aspect-ratio:4/5;background:#000;position:relative;overflow:hidden}
-.preview iframe{position:absolute;top:0;left:0;width:1080px;height:1350px;border:0;transform-origin:top left}
+  .card { background: var(--paper); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .card-head { padding: 14px 18px; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .card-code { font-family: 'Poppins'; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--lc-green); }
+  .card-spec { font-size: 11px; color: var(--ink-soft); }
 
-.section-label{display:block;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--lc-green);margin:48px 0 16px}
+  .preview { width: 100%; aspect-ratio: 4/5; background: #000; position: relative; overflow: hidden; }
+  .preview iframe { position: absolute; top: 0; left: 0; width: 1080px; height: 1350px; border: 0; transform-origin: top left; }
 
-.open{display:inline-block;color:#fff;background:var(--lc-green);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:6px;margin-top:6px;align-self:flex-start}
-.open:hover{background:var(--lc-green-deep)}
-
-.note{padding:14px 18px 16px;background:var(--bg-alt);border-top:1px solid var(--border);font-size:13px;color:#4A4A4A;line-height:1.55}
-.note b{color:var(--lc-green-deep)}
+  .copy-table { padding: 14px 18px 16px; }
+  .copy-row { display: grid; grid-template-columns: 90px 1fr; gap: 14px; padding: 8px 0; border-bottom: 1px dashed var(--rule); }
+  .copy-row:last-child { border-bottom: none; }
+  .copy-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); padding-top: 2px; }
+  .copy-value { font-size: 13px; line-height: 1.5; color: var(--ink); }
+  .copy-value b { font-weight: 600; }
+  .open { display: inline-block; margin: 0 18px 16px; padding: 7px 14px;
+    background: var(--lc-green); color: #fff; font-size: 11px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border-radius: 6px; align-self: flex-start; }
+  .open:hover { background: var(--lc-green-deep); }
 </style>
 <script>
 function sizePreviews(){
@@ -56,110 +80,115 @@ window.addEventListener('resize',sizePreviews);
 </head>
 <body>
 
-<section class="hero">
-  <div class="wrap">
-    <h1>Performance Sale · 4-split <em>concepts</em></h1>
-    <p>Four creator-led square concepts across two layouts and two offer mechanics.</p>
+<div class="hero">
+  <h1>Performance Sale · <em>creator</em> and <em>4-split</em> concepts.</h1>
+  <p class="lede">Designed in the Performance Sale track-pack visual language — DM Serif italic headlines, cream + amber on hero imagery, soft vignettes. Two adset tiers: 30% sitewide, and 20% sitewide + free gift over $100.</p>
+  <div class="pills">
+    <span class="pill lc">4:5 · 1080×1350</span>
+    <span class="pill">DM Serif Display · Poppins</span>
+    <span class="pill">Cream · Amber · LC Green</span>
   </div>
-</section>
+</div>
 
-<section>
-  <div class="wrap">
-    <div class="style-grid">
+<div class="section">
+  <div class="section-head">
+    <h2>Creator solos</h2>
+    <span class="sub">For whitelist posts · 4:5 · italic serif headline + offer mark</span>
+  </div>
 
-      <div class="style-card">
-        <div class="preview"><iframe src="v-a-headline-top.html" scrolling="no"></iframe></div>
-        <div class="style-card-body">
-          <div class="style-card-head">
-            <div class="style-card-code">01</div>
-            <div class="style-card-style">Headline top · 30%</div>
-          </div>
-          <a class="open" href="v-a-headline-top.html" target="_blank">Open full</a>
-        </div>
-        <div class="note"><b>Top:</b> Professional Athletes Choose Lifecykel · <b>Middle:</b> 30% Off Sitewide + free gift with every order.</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-code">MASVIDAL</span>
+        <span class="card-spec">4:5 · 20% + $100</span>
       </div>
-
-      <div class="style-card">
-        <div class="preview"><iframe src="v-d-headline-top-20.html" scrolling="no"></iframe></div>
-        <div class="style-card-body">
-          <div class="style-card-head">
-            <div class="style-card-code">02</div>
-            <div class="style-card-style">Headline top · 20% + $100</div>
-          </div>
-          <a class="open" href="v-d-headline-top-20.html" target="_blank">Open full</a>
-        </div>
-        <div class="note"><b>Top:</b> Professional Athletes Choose Lifecykel · <b>Middle:</b> 20% Off Sitewide + free gift with every order over $100.</div>
+      <div class="preview"><iframe src="masvidal-1.html" scrolling="no"></iframe></div>
+      <div class="copy-table">
+        <div class="copy-row"><div class="copy-label">Eyebrow</div><div class="copy-value">Performance Sale Now Live</div></div>
+        <div class="copy-row"><div class="copy-label">Title</div><div class="copy-value"><b>Train like the pros</b> (italic serif)</div></div>
+        <div class="copy-row"><div class="copy-label">Sub</div><div class="copy-value"><b>20% off sitewide</b> · free gift over $100</div></div>
       </div>
-
-      <div class="style-card">
-        <div class="preview"><iframe src="v-b-sale-top.html" scrolling="no"></iframe></div>
-        <div class="style-card-body">
-          <div class="style-card-head">
-            <div class="style-card-code">03</div>
-            <div class="style-card-style">Sale top · 30%</div>
-          </div>
-          <a class="open" href="v-b-sale-top.html" target="_blank">Open full</a>
-        </div>
-        <div class="note"><b>Top:</b> 30% Off Sitewide + free gift · <b>Middle:</b> Professional Athletes Choose Lifecykel.</div>
-      </div>
-
-      <div class="style-card">
-        <div class="preview"><iframe src="v-c-sale-top-20.html" scrolling="no"></iframe></div>
-        <div class="style-card-body">
-          <div class="style-card-head">
-            <div class="style-card-code">04</div>
-            <div class="style-card-style">Sale top · 20% + $100</div>
-          </div>
-          <a class="open" href="v-c-sale-top-20.html" target="_blank">Open full</a>
-        </div>
-        <div class="note"><b>Top:</b> 20% Off Sitewide + free gift over $100 · <b>Middle:</b> Professional Athletes Choose Lifecykel.</div>
-      </div>
-
+      <a class="open" href="masvidal-1.html" target="_blank">Open full</a>
     </div>
 
-    <span class="section-label">Creator solos · 4:5 vertical · for whitelist posts</span>
-
-    <div class="style-grid">
-
-      <div class="style-card">
-        <div class="preview"><iframe src="masvidal-1.html" scrolling="no"></iframe></div>
-        <div class="style-card-body">
-          <div class="style-card-head">
-            <div class="style-card-code">Masvidal</div>
-            <div class="style-card-style">20% + $100</div>
-          </div>
-          <a class="open" href="masvidal-1.html" target="_blank">Open full</a>
-        </div>
-        <div class="note"><b>Top:</b> Performance Sale Now Live · "Train Like The Pros". <b>Bottom anchor:</b> 20% Off Sitewide + Free gift with every order over $100.</div>
+    <div class="card">
+      <div class="card-head">
+        <span class="card-code">CAROLINE PIERCE</span>
+        <span class="card-spec">4:5 · 20% + $100</span>
       </div>
-
-      <div class="style-card">
-        <div class="preview"><iframe src="caroline-pierce.html" scrolling="no"></iframe></div>
-        <div class="style-card-body">
-          <div class="style-card-head">
-            <div class="style-card-code">Caroline Pierce</div>
-            <div class="style-card-style">20% + $100</div>
-          </div>
-          <a class="open" href="caroline-pierce.html" target="_blank">Open full</a>
-        </div>
-        <div class="note"><b>Top:</b> Performance Sale Now Live · "Train Like The Pros". <b>Bottom anchor:</b> 20% Off Sitewide + Free gift with every order over $100.</div>
+      <div class="preview"><iframe src="caroline-pierce.html" scrolling="no"></iframe></div>
+      <div class="copy-table">
+        <div class="copy-row"><div class="copy-label">Eyebrow</div><div class="copy-value">Performance Sale Now Live</div></div>
+        <div class="copy-row"><div class="copy-label">Title</div><div class="copy-value"><b>Train like the pros</b> (italic serif)</div></div>
+        <div class="copy-row"><div class="copy-label">Sub</div><div class="copy-value"><b>20% off sitewide</b> · free gift over $100</div></div>
       </div>
-
-      <div class="style-card">
-        <div class="preview"><iframe src="lindsay-brewer.html" scrolling="no"></iframe></div>
-        <div class="style-card-body">
-          <div class="style-card-head">
-            <div class="style-card-code">Lindsay Brewer</div>
-            <div class="style-card-style">20% + $100</div>
-          </div>
-          <a class="open" href="lindsay-brewer.html" target="_blank">Open full</a>
-        </div>
-        <div class="note"><b>Top:</b> Performance Sale Now Live · "Train Like The Pros". <b>Bottom anchor:</b> 20% Off Sitewide + Free gift with every order over $100.</div>
-      </div>
-
+      <a class="open" href="caroline-pierce.html" target="_blank">Open full</a>
     </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-code">LINDSAY BREWER</span>
+        <span class="card-spec">4:5 · 20% + $100</span>
+      </div>
+      <div class="preview"><iframe src="lindsay-brewer.html" scrolling="no"></iframe></div>
+      <div class="copy-table">
+        <div class="copy-row"><div class="copy-label">Eyebrow</div><div class="copy-value">Performance Sale Now Live</div></div>
+        <div class="copy-row"><div class="copy-label">Title</div><div class="copy-value"><b>Train like the pros</b> (italic serif)</div></div>
+        <div class="copy-row"><div class="copy-label">Sub</div><div class="copy-value"><b>20% off sitewide</b> · free gift over $100</div></div>
+      </div>
+      <a class="open" href="lindsay-brewer.html" target="_blank">Open full</a>
+    </div>
+
   </div>
-</section>
+</div>
+
+<div class="section">
+  <div class="section-head">
+    <h2>4-split concepts · two offer tiers × two layouts</h2>
+    <span class="sub">2x2 athlete grid · italic serif sale mark · 4:5</span>
+  </div>
+
+  <div class="grid grid-2">
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-code">01 · Headline top</span>
+        <span class="card-spec">30% sitewide + free gift</span>
+      </div>
+      <div class="preview"><iframe src="v-a-headline-top.html" scrolling="no"></iframe></div>
+      <a class="open" href="v-a-headline-top.html" target="_blank">Open full</a>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-code">02 · Headline top</span>
+        <span class="card-spec">20% sitewide + free gift over $100</span>
+      </div>
+      <div class="preview"><iframe src="v-d-headline-top-20.html" scrolling="no"></iframe></div>
+      <a class="open" href="v-d-headline-top-20.html" target="_blank">Open full</a>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-code">03 · Sale top</span>
+        <span class="card-spec">30% sitewide + free gift</span>
+      </div>
+      <div class="preview"><iframe src="v-b-sale-top.html" scrolling="no"></iframe></div>
+      <a class="open" href="v-b-sale-top.html" target="_blank">Open full</a>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-code">04 · Sale top</span>
+        <span class="card-spec">20% sitewide + free gift over $100</span>
+      </div>
+      <div class="preview"><iframe src="v-c-sale-top-20.html" scrolling="no"></iframe></div>
+      <a class="open" href="v-c-sale-top-20.html" target="_blank">Open full</a>
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>

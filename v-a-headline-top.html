@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>M-1 · Headline top + sale middle · Life Cykel</title>
+<title>4-split · Headline top + 30% sale middle · Life Cykel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
-  --lc-green:#2F5630;--lc-green-deep:#1f3b21;--lc-amber:#F4A623;
+  --lc-green:#2F5630;--lc-green-deep:#1F3D20;
+  --lc-cream:#F5EFE3;--lc-amber:#E8A22B;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{background:#1a1a1a;font-family:'Poppins',system-ui,sans-serif;padding:32px;display:flex;justify-content:center}
@@ -21,12 +22,10 @@ body{background:#1a1a1a;font-family:'Poppins',system-ui,sans-serif;padding:32px;
   overflow:hidden;background:#000;
   container-type:inline-size;
 }
-
 .split-grid{
   position:absolute;inset:0;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr 1fr;
+  grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
   gap:3px;background:var(--lc-green-deep);
 }
 .quad{background-size:cover;position:relative}
@@ -35,40 +34,46 @@ body{background:#1a1a1a;font-family:'Poppins',system-ui,sans-serif;padding:32px;
 .q3{background-image:url('images/fighter-bearded.jpg');background-position:center top}
 .q4{background-image:url('images/blonde-audi.jpg');background-position:center top}
 
+.vignette-top{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0) 22%);pointer-events:none;z-index:2}
+
+.eyebrow{
+  position:absolute;top:5cqw;left:5cqw;right:5cqw;
+  text-align:center;color:var(--lc-cream);
+  font-size:2.4cqw;font-weight:500;
+  letter-spacing:.28em;text-transform:uppercase;
+  text-shadow:0 1px 8px rgba(0,0,0,0.55);z-index:4;
+}
+
 .lk-top{
-  position:absolute;top:0;left:0;right:0;
-  padding:4cqw 5cqw 7cqw;
-  background:linear-gradient(to bottom,rgba(15,30,18,.88) 0%,rgba(15,30,18,.50) 60%,rgba(0,0,0,0) 100%);
-  color:#fff;z-index:4;text-align:center;
+  position:absolute;top:10cqw;left:0;right:0;
+  text-align:center;color:var(--lc-cream);
+  z-index:4;padding:0 5cqw;
 }
-.lk-h1{
-  font-size:6.8cqw;line-height:1.04;font-weight:900;
-  letter-spacing:-.01em;color:#fff;
-  text-shadow:0 2px 16px rgba(0,0,0,.5);
+.lk-top .h{
+  font-family:'DM Serif Display',Georgia,serif;font-style:italic;
+  font-size:8.4cqw;line-height:1.02;letter-spacing:-.01em;
+  text-shadow:0 3px 18px rgba(0,0,0,0.65);
 }
-.lk-h1 em{font-style:normal;color:var(--lc-amber)}
+.lk-top .h em{font-style:italic;color:var(--lc-amber)}
 
 .lk-mid{
   position:absolute;left:0;right:0;
   top:50%;transform:translateY(-50%);
-  padding:2.6cqw 5cqw;
-  background:linear-gradient(to bottom,rgba(15,30,18,0) 0%,rgba(15,30,18,.92) 18%,rgba(15,30,18,.92) 82%,rgba(15,30,18,0) 100%);
-  color:#fff;text-align:center;z-index:5;
+  padding:3cqw 5cqw;
+  background:linear-gradient(to bottom,rgba(31,61,32,0) 0%,rgba(31,61,32,.92) 16%,rgba(31,61,32,.92) 84%,rgba(31,61,32,0) 100%);
+  color:var(--lc-cream);text-align:center;z-index:5;
 }
 .lk-mid .big{
-  font-size:7.6cqw;font-weight:900;line-height:1;letter-spacing:-.02em;
+  font-family:'DM Serif Display',Georgia,serif;font-style:italic;
+  font-size:9.5cqw;line-height:1;letter-spacing:-.02em;
 }
-.lk-mid .big em{font-style:normal;color:var(--lc-amber)}
+.lk-mid .big em{font-style:italic;color:var(--lc-amber)}
 .lk-mid .sub{
-  font-size:2.8cqw;font-weight:700;margin-top:1.8cqw;
-  color:#fff;line-height:1.25;letter-spacing:.02em;
+  font-size:2.6cqw;font-weight:500;margin-top:1.8cqw;
+  letter-spacing:.22em;text-transform:uppercase;color:#fff;
 }
 
-.lk-tc-bl{
-  position:absolute;bottom:2cqw;left:3cqw;font-size:1.6cqw;
-  color:#fff;opacity:.7;z-index:6;letter-spacing:.04em;
-  text-shadow:0 1px 4px rgba(0,0,0,.55);font-weight:500;line-height:1;
-}
+.tc{position:absolute;left:3cqw;bottom:2cqw;font-size:1.4cqw;color:#fff;opacity:.6;letter-spacing:.04em;z-index:6}
 </style>
 </head>
 <body>
@@ -79,14 +84,13 @@ body{background:#1a1a1a;font-family:'Poppins',system-ui,sans-serif;padding:32px;
     <div class="quad q3"></div>
     <div class="quad q4"></div>
   </div>
-  <div class="lk-top">
-    <div class="lk-h1">Professional Athletes<br>Choose <em>Lifecykel</em></div>
-  </div>
+  <div class="vignette-top"></div>
+  <div class="eyebrow">· Professional Athletes Choose Lifecykel ·</div>
   <div class="lk-mid">
-    <div class="big"><em>30% Off</em> Sitewide</div>
-    <div class="sub">+ Free gift with every order</div>
+    <div class="big"><em>30% off</em> sitewide</div>
+    <div class="sub">+ free gift with every order</div>
   </div>
-  <div class="lk-tc-bl">*T&amp;C's apply.</div>
+  <div class="tc">*T&amp;C's apply.</div>
 </div>
 </body>
 </html>
