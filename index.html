@@ -31,10 +31,8 @@ section{padding:8px 0 56px}
 .style-card-code{font-family:'SFMono-Regular',Menlo,Monaco,monospace;font-size:11px;font-weight:700;background:var(--text-primary);color:#fff;padding:3px 8px;border-radius:4px}
 .style-card-style{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--lc-green);text-align:right}
 
-.preview{width:100%;aspect-ratio:1/1;background:#000;position:relative;overflow:hidden}
-.preview iframe{position:absolute;top:0;left:0;width:1080px;height:1080px;border:0;transform-origin:top left}
-.preview.vert{aspect-ratio:4/5}
-.preview.vert iframe{height:1350px}
+.preview{width:100%;aspect-ratio:4/5;background:#000;position:relative;overflow:hidden}
+.preview iframe{position:absolute;top:0;left:0;width:1080px;height:1350px;border:0;transform-origin:top left}
 
 .section-label{display:block;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--lc-green);margin:48px 0 16px}
 
@@ -50,10 +48,6 @@ function sizePreviews(){
     const iframe=p.querySelector('iframe');if(!iframe)return;
     const scale=p.offsetWidth/1080;
     iframe.style.transform=`scale(${scale})`;
-  });
-  document.querySelectorAll('.preview.vert iframe').forEach(f=>{
-    const scale=f.parentElement.offsetWidth/1080;
-    f.style.transform=`scale(${scale})`;
   });
 }
 window.addEventListener('load',sizePreviews);
@@ -128,7 +122,7 @@ window.addEventListener('resize',sizePreviews);
     <div class="style-grid">
 
       <div class="style-card">
-        <div class="preview vert"><iframe src="masvidal-1.html" scrolling="no"></iframe></div>
+        <div class="preview"><iframe src="masvidal-1.html" scrolling="no"></iframe></div>
         <div class="style-card-body">
           <div class="style-card-head">
             <div class="style-card-code">Masvidal</div>
@@ -140,7 +134,7 @@ window.addEventListener('resize',sizePreviews);
       </div>
 
       <div class="style-card">
-        <div class="preview vert"><iframe src="caroline-pierce.html" scrolling="no"></iframe></div>
+        <div class="preview"><iframe src="caroline-pierce.html" scrolling="no"></iframe></div>
         <div class="style-card-body">
           <div class="style-card-head">
             <div class="style-card-code">Caroline Pierce</div>
@@ -152,7 +146,7 @@ window.addEventListener('resize',sizePreviews);
       </div>
 
       <div class="style-card">
-        <div class="preview vert"><iframe src="lindsay-brewer.html" scrolling="no"></iframe></div>
+        <div class="preview"><iframe src="lindsay-brewer.html" scrolling="no"></iframe></div>
         <div class="style-card-body">
           <div class="style-card-head">
             <div class="style-card-code">Lindsay Brewer</div>
