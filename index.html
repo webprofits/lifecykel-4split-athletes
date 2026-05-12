@@ -33,6 +33,10 @@ section{padding:8px 0 56px}
 
 .preview{width:100%;aspect-ratio:1/1;background:#000;position:relative;overflow:hidden}
 .preview iframe{position:absolute;top:0;left:0;width:1080px;height:1080px;border:0;transform-origin:top left}
+.preview.vert{aspect-ratio:4/5}
+.preview.vert iframe{height:1350px}
+
+.section-label{display:block;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--lc-green);margin:48px 0 16px}
 
 .open{display:inline-block;color:#fff;background:var(--lc-green);text-decoration:none;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:8px 14px;border-radius:6px;margin-top:6px;align-self:flex-start}
 .open:hover{background:var(--lc-green-deep)}
@@ -46,6 +50,10 @@ function sizePreviews(){
     const iframe=p.querySelector('iframe');if(!iframe)return;
     const scale=p.offsetWidth/1080;
     iframe.style.transform=`scale(${scale})`;
+  });
+  document.querySelectorAll('.preview.vert iframe').forEach(f=>{
+    const scale=f.parentElement.offsetWidth/1080;
+    f.style.transform=`scale(${scale})`;
   });
 }
 window.addEventListener('load',sizePreviews);
@@ -111,6 +119,36 @@ window.addEventListener('resize',sizePreviews);
           <a class="open" href="v-c-sale-top-20.html" target="_blank">Open full</a>
         </div>
         <div class="note"><b>Top:</b> 20% Off Sitewide + free gift over $100 · <b>Middle:</b> Professional Athletes Choose Lifecykel.</div>
+      </div>
+
+    </div>
+
+    <span class="section-label">Masvidal · solo · 4:5 vertical</span>
+
+    <div class="style-grid">
+
+      <div class="style-card">
+        <div class="preview vert"><iframe src="masvidal-1.html" scrolling="no"></iframe></div>
+        <div class="style-card-body">
+          <div class="style-card-head">
+            <div class="style-card-code">M1</div>
+            <div class="style-card-style">Durag · 20% + $100</div>
+          </div>
+          <a class="open" href="masvidal-1.html" target="_blank">Open full</a>
+        </div>
+        <div class="note"><b>Top:</b> Performance Sale Now Live · "Train Like The Pros". <b>Bottom anchor:</b> 20% Off Sitewide + Free gift with every order over $100.</div>
+      </div>
+
+      <div class="style-card">
+        <div class="preview vert"><iframe src="masvidal-2.html" scrolling="no"></iframe></div>
+        <div class="style-card-body">
+          <div class="style-card-head">
+            <div class="style-card-code">M2</div>
+            <div class="style-card-style">Standing · 20% + $100</div>
+          </div>
+          <a class="open" href="masvidal-2.html" target="_blank">Open full</a>
+        </div>
+        <div class="note"><b>Top:</b> 20% Off Sitewide + Free gift with every order over $100. <b>Bottom pill:</b> Performance Sale · Now Live.</div>
       </div>
 
     </div>
